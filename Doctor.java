@@ -2,26 +2,19 @@ package HospitalManagement_Update;
 public class Doctor {
     private String name;
     private String specialization;
-    private String phoneNumber;
-    // Constructor
-    public Doctor(String name, String specialization, String phoneNumber) {
+    private int experience;
+
+    public Doctor(String name, String specialization, int experience) {
         this.name = name;
         this.specialization = specialization;
-        this.phoneNumber = phoneNumber;
+        this.experience = experience;
     }
-    // Getter for name
-    public String getName() {
-        return name;
+
+    public String getName() { return name; }
+    public String getSpecialization() { return specialization; }
+    public int getExperience() { return experience; }
+
+    public String toString() {
+        return name + " | " + specialization + " | " + experience + " years";
     }
-    // Methods to display doctor details 
-    public void displayDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Specialization: " + specialization);
-        System.out.println("Phone Number: " + phoneNumber);
-    }
-    // Method to diagnose a patient
-    public void diagnose(Patient patient) {
-        System.out.println(name + " is diagnosing " + patient.getName());
-        System.out.println("Diagnosis: " + patient.getMedicalCondition());
-    }
-    }
+}
