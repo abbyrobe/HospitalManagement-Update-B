@@ -52,7 +52,7 @@ public class HospitalSystem {
         } while (choice != 0);
     }
 
-    // 🔹 Add Patient
+    // Add Patient
     public static void addPatient() {
         System.out.print("Enter name: ");
         String name = input.nextLine();
@@ -68,7 +68,7 @@ public class HospitalSystem {
         System.out.println("Patient added successfully!");
     }
 
-    // 🔹 View Patients
+    // View Patients
     public static void viewPatients() {
         if (patients.isEmpty()) {
             System.out.println("No patients found.");
@@ -79,7 +79,7 @@ public class HospitalSystem {
         }
     }
 
-    // 🔹 Save to File
+    //Save to File
     public static void savePatientsToFile() {
         try {
             FileWriter writer = new FileWriter("patients.txt");
@@ -95,7 +95,7 @@ public class HospitalSystem {
         }
     }
 
-    // 🔹 Load from File
+   // Load from File
     public static void loadPatientsFromFile() {
         try {
             File file = new File("patients.txt");
